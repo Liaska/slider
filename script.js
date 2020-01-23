@@ -1,5 +1,7 @@
 let sliderItem = document.querySelectorAll(".slider-item");
 let actualCount = 0;
+let linker = ["https://cloudtrade.ru/blog/news2-b8","https://cloudtrade.ru/blog/news-hookah-b7",
+"https://cloudtrade.ru/blog/news-hookah-b5","https://cloudtrade.ru/blog/news-hookah-b6"];
 
 function slider() {
     for (let i = 0; i < sliderItem.length; i ++) {
@@ -30,3 +32,6 @@ document.querySelector(".btn-up").onclick = function () {
     }
     slider();
 }
+
+
+sliderItem.forEach((el,i)=> el.onclick=e=> location = linker[i]);
